@@ -1,0 +1,29 @@
+#main {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#projects {
+    background-color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#project {
+    flex-basis: 49%;
+}
+
+#project > div {
+    background-color: brown;
+    height: 200px;
+}
+
+#project > h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

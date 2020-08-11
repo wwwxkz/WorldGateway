@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<title>WorldGateway</title>
+</head>
+<script>
+	function loadIframe(iframeName, url) {
+		var $iframe = $('#' + iframeName);
+		if ($iframe.length) {
+			$iframe.attr('src', url);
+			return false;
+		}
+		return true;
+	}
+
+	$(document).ready(function () {
+		$(".navbar a").click(function (event) {
+			var $this = $(this);
+			$(".navbar a").removeClass("active");
+			$this.removeClass('active');
+			$($this).addClass("active");
+		});
+	});
+</script>
+
+<body>
+
+	<div class="navbar">
+		<a onclick="loadIframe('page', 'pages/home/home.html')" class="active" href="#home">Home</a>
+		<a onclick="loadIframe('page', 'pages/news/news.html')">News</a>
+		<a onclick="loadIframe('page', 'pages/articles/articles.html')">Articles</a>
+		<a onclick="loadIframe('page', 'pages/projects/projects.html')">Projects</a>
+		<a onclick="loadIframe('page', 'pages/about/about.html')">About</a>
+		<a onclick="loadIframe('page', 'pages/joinus/joinus.html')">Join us</a>
+		<a onclick="loadIframe('page', 'pages/contact/contact.html')">Contact</a>
+		<div class="search-container">
+			<form action="">
+				<input type="text" placeholder="Search" name="search">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+
+	<iframe id="page" src="pages/home/home.html">
+	</iframe>
+
+	<footer>
+		<div>
+			<div>
+				<h4>Receive follow news...</h4>
+			</div>
+			<div class="">
+				<form action="">
+					<input type="text" placeholder="Email" name="email">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

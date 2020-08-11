@@ -1,0 +1,21 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.main > div {
+    flex: 1;
+    display: flex;
+    margin: 5px;
+    background-color: #454545;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+  }
